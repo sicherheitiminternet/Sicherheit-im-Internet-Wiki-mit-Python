@@ -30,8 +30,8 @@ Bitte lesen Sie die [LICENSE.md](LICENSE.md).
 
 ## 4. Requirements 
 
-- Python 3.13.9
-- pip install pywebview
+-  Python 3.13.9
+- `pip install pywebview`
 
 
 
