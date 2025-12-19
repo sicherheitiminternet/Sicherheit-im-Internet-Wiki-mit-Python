@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Webseiten‑Injection - Sicherheit im Internet</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Kleine, zusätzliche Hilfsstile nur für diese Seite */
+        .icon { font-size: 1.6rem; margin-right: 8px; }
+        .card { padding: 15px; border-radius: 8px; background: #f7fbff; margin-bottom: 12px; }
+        .steps li { margin: 8px 0; }
+        .warn { color: #c0392b; font-weight: bold; }
+        .calm { color: #145a96; }
+        .small { font-size: 0.9rem; color: #555; margin-top: 6px; }
+        pre { white-space: pre-wrap; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Webseiten‑Injection und Schutz</h1>
+        <!-- Navigation entfernt -->
+    </header>
+
+    <main>
+        <!-- Abschnitt: Was ist Webseiten-Injection -->
+        <section class="welcome card">
+            <h2 class="calm">Was ist Webseiten‑Injection?</h2>
+            <p>
+                Webseiten‑Injection bedeutet, dass Angreifer schädlichen Code in eine Webseite einschleusen. 
+                Dieser Code kann HTML, JavaScript oder SQL sein und verändert, was Besucher sehen oder was die Seite im Hintergrund macht 🔧.
+            </p>
+            <p>
+                Ziel kann sein, Daten zu stehlen (z. B. Formulareingaben), Besucher auf falsche Seiten weiterzuleiten oder Schadcode auszuführen 🔒. 
+                Häufige Arten sind <strong>Cross‑Site Scripting (XSS)</strong> und <strong>SQL‑Injection</strong>.
+            </p>
+            <p>
+                Injection passiert oft über unsichere Formulare, schlecht geprüfte Eingaben oder Sicherheitslücken in der Server‑Software 🌐.
+            </p>
+            <p class="small">Kurze Aussage: Injection ist wie Gift, das unbemerkt in eine Webseite gemischt wird — Besucher und Daten können Schaden nehmen.</p>
+        </section>
+
+        <!-- Abschnitt: Wie erkennt man Injection -->
+        <section class="card">
+            <h2 class="calm">Wie erkennt man Webseiten‑Injection?</h2>
+            <ul>
+                <li> ⚠️ Unerwartete Inhalte auf Seiten (z. B. fremde Links, Werbung oder Meldungen).</li>
+                <li> 💬 Formulare liefern merkwürdige Fehlermeldungen oder zeigen eingegebene Inhalte unverändert an.</li>
+                <li> 🔁 Besucher werden ohne Grund weitergeleitet oder sehen Popup‑Meldungen.</li>
+                <li> 🛠️ Datenbankfehler oder ungewöhnliche Log‑Einträge im Server‑Log.</li>
+                <li> 🧭 Fremde Skripte werden geladen (Netzwerk‑Tab im Browser‑DevTool).</li>
+            </ul>
+            <p class="small">Hinweis: Manche Injection ist gut versteckt. Prüfen Sie systematisch, am besten in einer sicheren Test‑Umgebung.</p>
+        </section>
+
+        <!-- Abschnitt: Sofort-Schritte -->
+        <section class="card">
+            <h2 class="calm">Wichtig: Sofort‑Schritte bei Injection‑Verdacht</h2>
+            <ol class="steps">
+                <li> 🔌 <strong>Seite isolieren:</strong> Seite offline nehmen oder in Wartungsmodus versetzen.</li>
+                <li> 🧾 <strong>Logs sichern:</strong> Server‑Logs, Fehlerausgaben und Zeitstempel sichern.</li>
+                <li> 🧰 <strong>Code prüfen:</strong> Templates, Plugins und Formularstellen kontrollieren.</li>
+                <li> 🛡️ <strong>Temporäre Maßnahmen:</strong> Eingaben filtern, unsichere Bereiche deaktivieren, CSP setzen.</li>
+                <li> 🧑‍💻 <strong>Hilfe holen:</strong> Experten kontaktieren, wenn nötig.</li>
+            </ol>
+        </section>
+
+        <!-- Abschnitt: Dauerhafter Schutz -->
+        <section class="card">
+            <h2 class="calm">Wie Sie sich dauerhaft schützen</h2>
+            <ul>
+                <li> 🧼 <strong>Eingaben validieren:</strong> Client‑ und serverseitig filtern und prüfen.</li>
+                <li> 🔒 <strong>Prepared Statements:</strong> Immer vorbereitete SQL‑Abfragen nutzen.</li>
+                <li> 🧱 <strong>Content Security Policy:</strong> Schutz gegen fremde Skripte.</li>
+                <li> 🔄 <strong>Updates:</strong> CMS, Plugins und Server aktuell halten.</li>
+                <li> 🛡️ <strong>WAF:</strong> Eine Web Application Firewall schützt automatisch.</li>
+                <li> 🧪 <strong>Regelmäßige Tests:</strong> Security‑Scans und Pen‑Tests.</li>
+                <li> 👥 <strong>Least Privilege:</strong> Datenbank‑Konten nur mit minimalen Rechten.</li>
+            </ul>
+        </section>
+
+        <!-- Abschnitt: Beispiele -->
+        <section class="card">
+            <h2 class="calm">Beispiele für Injection</h2>
+            <ul>
+                <li> 🧭 <strong>XSS:</strong> JavaScript wird in fremde Browser eingeschleust.</li>
+                <li> 🗄️ <strong>SQL‑Injection:</strong> Manipulierte Eingaben verändern Datenbank‑Befehle.</li>
+                <li> 🔗 <strong>Parameter‑Tampering:</strong> URL‑Parameter werden manipuliert.</li>
+                <li> 🧩 <strong>Remote File Inclusion:</strong> Externe Dateien werden ausgeführt.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>© 2025 Sicherheit im Internet</strong></p>
+    </footer>
+</body>
+</html>

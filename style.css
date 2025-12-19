@@ -1,0 +1,62 @@
+/* Grundlegendes Layout */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #4a90e2;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main-Bereich */
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+/* Überschriften */
+h2 {
+    color: #4a90e2;
+}
+
+/* Listen */
+ul {
+    padding-left: 20px;
+}
+
+/* Buttons */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4a90e2;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #000; /* schwarz */
+}

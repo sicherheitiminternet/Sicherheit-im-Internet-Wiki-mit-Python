@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DDoS‑Angriffe - Sicherheit im Internet</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Kleine, zusätzliche Hilfsstile nur für diese Seite */
+        .icon { font-size: 1.6rem; margin-right: 8px; }
+        .card { padding: 15px; border-radius: 8px; background: #f7fbff; margin-bottom: 12px; }
+        .steps li { margin: 8px 0; }
+        .warn { color: #c0392b; font-weight: bold; }
+        .calm { color: #145a96; }
+        .small { font-size: 0.9rem; color: #555; margin-top: 6px; }
+        nav ul { list-style: none; padding: 0; display: flex; gap: 12px; flex-wrap: wrap; }
+        nav a.active { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DDoS‑Angriffe und Schutz</h1>
+        <!-- Navigation entfernt -->
+    </header>
+
+    <main>
+        <!-- Abschnitt: Was ist ein DDoS-Angriff -->
+        <section class="welcome card">
+            <h2 class="calm">Was ist ein DDoS‑Angriff?</h2>
+            <p>
+                DDoS steht für „Distributed Denial of Service“ — also die verteilte Überlastung eines Dienstes. 
+                Bei einem DDoS‑Angriff senden viele Computer gleichzeitig sehr viele Anfragen an eine Webseite oder einen Server, 
+                sodass dieser überlastet wird und nicht mehr richtig funktioniert 🚫.
+            </p>
+            <p>
+                Ziel kann sein, eine Webseite kurzzeitig abzuschalten, Dienste zu stören oder Druck auf Betreiber auszuüben. 
+                Angreifer nutzen oft gekaperte Geräte (Botnetze) oder viele kleine Computer, um die Angriffe zu starten 🤖.
+            </p>
+            <p>
+                Wichtig: DDoS greift nicht direkt Ihre Daten an — es macht Dienste unzugänglich. Vorbereitung und schnelle Reaktion helfen.
+            </p>
+            <p class="small">Kurze Aussage: Ein DDoS‑Angriff ist wie ein riesiger Stau auf einer Straße — nichts kommt mehr durch.</p>
+        </section>
+
+        <!-- Abschnitt: Wie erkennt man einen DDoS-Angriff -->
+        <section class="card">
+            <h2 class="calm">Wie erkennen Sie einen DDoS‑Angriff?</h2>
+            <ul>
+                <li> ⚠️ Plötzlich sehr viele Anfragen oder Verbindungen auf Ihren Server oder Ihre Webseite.</li>
+                <li> 🕘 Dienste sind langsam oder nicht erreichbar (Website lädt nicht).</li>
+                <li> 📈 Ungewöhnliche Spitzen in Netzwerk‑ oder Traffic‑Statistiken.</li>
+                <li> 🌐 Viele Verbindungen aus vielen Ländern oder ähnlichen IP‑Bereichen.</li>
+                <li> 🔁 Wiederholte Anfragen an dieselbe Ressource (z. B. Login‑Seite).</li>
+            </ul>
+            <p class="small">Hinweis: Manche Ausfälle sind technischer Natur. Prüfen Sie den Verdacht sorgfältig und ziehen Sie nicht sofort Schlussfolgerungen.</p>
+        </section>
+
+        <!-- Abschnitt: Sofort-Schritte -->
+        <section class="card">
+            <h2 class="calm">Wichtig: Sofort‑Schritte bei DDoS‑Verdacht</h2>
+            <ol class="steps">
+                <li> 📡 <strong>Erkennen:</strong> Prüfen Sie Logs und Monitoring‑Daten, um ungewöhnlichen Traffic zu bestätigen.</li>
+                <li> 🔌 <strong>Isolieren:</strong> Versuchen Sie, betroffene Server vom Internet zu trennen, falls möglich, ohne kritische Systeme zu beschädigen.</li>
+                <li> ☎️ <strong>Kontaktieren:</strong> Informieren Sie Ihren Hosting‑Provider oder Ihr Rechenzentrum — sie können Gegenmaßnahmen einleiten.</li>
+                <li> 🛡️ <strong>Traffic filtern:</strong> Setzen Sie Regeln in Firewalls oder Load‑Balancern, um schädlichen Traffic zu blockieren.</li>
+                <li> 🔄 <strong>Failover nutzen:</strong> Falls vorhanden, aktivieren Sie Ausweich‑Server, CDN oder DDoS‑Schutzdienste.</li>
+                <li> 🧾 <strong>Dokumentieren:</strong> Notieren Sie Zeiten, IPs und beobachtete Muster — das hilft später bei der Analyse.</li>
+            </ol>
+        </section>
+
+        <!-- Abschnitt: Dauerhafter Schutz -->
+        <section class="card">
+            <h2 class="calm">Wie Sie sich dauerhaft schützen</h2>
+            <ul>
+                <li> 🛡️ <strong>DDoS‑Schutzdienste:</strong> Nutzen Sie spezialisierte Dienste (z. B. CDN, DDoS‑Mitigation), die Traffic filtern.</li>
+                <li> ⚖️ <strong>Lastverteilung:</strong> Verwenden Sie Load‑Balancer und mehrere Server‑Standorte (geografisch verteilt).</li>
+                <li> 🔍 <strong>Monitoring:</strong> Überwachen Sie Traffic, Latenz und Ressourcennutzung kontinuierlich.</li>
+                <li> 🔒 <strong>Firewall‑Regeln:</strong> Strikte Regeln für Ports und Protokolle, um unnötigen Traffic zu blockieren.</li>
+                <li> 📞 <strong>Kontaktplan:</strong> Halten Sie Kontakt zu Provider, Host und Incident‑Response‑Team bereit.</li>
+                <li> 💾 <strong>Notfall‑Plan:</strong> Erstellen Sie ein Vorgehen für Ausfälle (Who, What, How) und testen Sie es gelegentlich.</li>
+                <li> 👥 <strong>Wenig Rechte:</strong> Trennen Sie administrative Aufgaben von öffentlich erreichbaren Diensten.</li>
+            </ul>
+        </section>
+
+        <!-- Abschnitt: Beispiele -->
+        <section class="card">
+            <h2 class="calm">Beispiele für DDoS‑Angriffe</h2>
+            <ul>
+                <li> 🌐 <strong>Volumen‑Angriff:</strong> Viele Datenpakete überschwemmen die Verbindung (z. B. UDP‑Flood).</li>
+                <li> 🔁 <strong>Protokoll‑Angriff:</strong> Schwächt Netzwerkgeräte durch viele halboffene Verbindungen (z. B. SYN‑Flood).</li>
+                <li> 🎯 <strong>Applikations‑Angriff:</strong> Zielgerichtete Anfragen, die spezifische Dienste überlasten (z. B. Login‑Formulare).</li>
+            </ul>
+        </section>
+
+    <footer>
+        <p><strong>© 2025 Sicherheit im Internet</strong></p>
+    </footer>
+</body>
+</html>
