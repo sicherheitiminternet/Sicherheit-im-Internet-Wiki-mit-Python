@@ -28,6 +28,13 @@ Bitte lesen Sie die [LICENSE.md](LICENSE.md).
 
 
 
+## 4. Requirements 
+
+- Python 3.13.9
+- pip install pywebview
+
+
+
 ## 4. Updates
 
 - Wenn eine neue Version des Wikis veröffentlicht wird, **müssen Sie das Repository erneut herunterladen**, um auf dem aktuellen Stand zu bleiben.  
