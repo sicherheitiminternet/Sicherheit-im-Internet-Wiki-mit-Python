@@ -14,21 +14,34 @@ def open_page(file_name):
         print(f"[Fehler] Datei '{file_name}' existiert nicht!")
         return
 
-    webview.create_window(file_name.replace(".html",""), os.path.abspath(file_name))
+    # Vollbild für HTML-Fenster
+    webview.create_window(
+        file_name.replace(".html",""), 
+        os.path.abspath(file_name), 
+        fullscreen=True
+    )
     webview.start()
-    start_hub()  # Hub wieder öffnen
+    
+    # Hub nach Schließen der HTML-Seite wieder öffnen
+    start_hub()
 
 def start_hub():
     root = tk.Tk()
     root.title("Owner Wiki Hub")
-    root.geometry("900x600")
+    
+    # Vollbild aktivieren
+    root.attributes("-fullscreen", True)
+    
+    # Escape-Taste zum Verlassen des Vollbilds
+    root.bind("<Escape>", lambda e: root.attributes("-fullscreen", False))
+
     root.config(bg="#f4f4f4")
 
     # Header
     header = tk.Frame(root, bg="#4a90e2", height=100)
     header.pack(fill=tk.X)
 
-    # Titel im Header, zentriert
+    # Titel im Header
     title = tk.Label(header, text="Willkommen bei Sicherheit im Internet", bg="#4a90e2", fg="white",
                      font=("Arial", 24, "bold"))
     title.pack(pady=10)
@@ -51,7 +64,7 @@ def start_hub():
         btn.bind("<Enter>", on_enter)
         btn.bind("<Leave>", on_leave)
 
-    # Hauptbereich wie <main>
+    # Hauptbereich
     main_area = tk.Frame(root, bg="white", bd=0)
     main_area.pack(pady=20, padx=20, fill=tk.BOTH, expand=True)
 
@@ -62,11 +75,11 @@ def start_hub():
         fg="#333333",
         font=("Arial", 28, "bold"),
         justify="center"
-)
-    main_label.pack(expand=True)  # WICHTIG: expand=True zentriert vertikal und horizontal
+    )
+    main_label.pack(expand=True)
     
-    # Footer wie auf den Wiki-Seiten (dicker Balken)
-    footer = tk.Frame(root, bg="#4a90e2", height=80)  # Höhe anpassen, z.B. 60px
+    # Footer
+    footer = tk.Frame(root, bg="#4a90e2", height=80)
     footer.pack(side=tk.BOTTOM, fill=tk.X)
 
     footer_label = tk.Label(
@@ -74,9 +87,10 @@ def start_hub():
         text="© 2025 Sicherheit im Internet Wiki",
         bg="#4a90e2",
         fg="white",
-        font=("Arial", 18, "bold")  # Text etwas größer
+        font=("Arial", 18, "bold")
     )
     footer_label.pack(expand=True)
+
     root.mainloop()
 
 # Hub starten
