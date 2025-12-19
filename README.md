@@ -1,8 +1,8 @@
-# Sicherheit-Im-Internet‑Wiki
+# Sicherheit-im-Internet-Wiki-mit-Python
 
 ## 1. Lizenz
 
-Dieses Repository enthält das **Sicherheit-Im-Internet‑Wik**.  
+Dieses Repository enthält das **Sicherheit-im-Internet-Wiki-mit-Python**.  
 Bitte lesen Sie die [LICENSE.md](LICENSE.md).
 
 
